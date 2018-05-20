@@ -1,0 +1,7 @@
+site:mydomain.com
+intitle:term
+inurl:term
+intext:term
+ext:pdf
+-term
+"my long phrase"

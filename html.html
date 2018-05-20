@@ -1,0 +1,188 @@
+<html>
+
+	<head>
+    
+        <!-- JavaScript -->
+        
+        <script language="JavaScript">
+        
+        // URL in address bar of browser
+        var docURL = document.URL;
+        
+        // Redirect to website
+        window.location="http://www.test.com";
+        
+        </script>
+    
+        <!-- AJAX mit jQuery -->
+    
+        <script language="JavaScript" src="jquery-1.7.2.min.js">
+        </script>
+    
+        <script language="JavaScript">
+        function doAJAX() {
+            $.ajax({
+                type: "GET",                    // oder: POST
+                url: "my_ajax.php",
+                data: { getParam1: "valueOfGetParam1" }
+             }).done(function( msg ) {
+                //msg ist die Antwort der Seite als Plain Text
+             });
+         }
+        </script>
+        
+        <!-- mit JSON -->
+
+        <script language="JavaScript">
+        
+        // in my_ajax.php:
+        
+        //$json_result_array = Array("myVar" => 42);
+        //echo json_encode($json_result_array);
+        
+        function doAJAX() {
+            $.ajax({
+                type: "GET",                    // oder: POST
+                url: "my_ajax.php",
+                data: { getParam1: "valueOfGetParam1" }
+             }).done(function( msg ) {
+                var json = $.parseJSON(msg);
+                
+                // Zugriff auf assoziatives Array
+                alert(json.myVar); // == 42
+             });
+         }
+        </script>
+        
+    
+	</head>
+	
+	<body>
+	
+		<!-- Dokument-Struktur -->
+		
+		<p>
+			Paragraph oder Absatz
+		</p>
+		
+		<div>
+			Bestimmter Abschnitt
+		</div>
+		
+		<br>								<!-- Neue Zeile -->
+		
+		<hr />								<!-- Horizontale Trennlinie -->
+		
+		<ul>								<!-- Liste -->
+			<li>							<!-- Listen-Eintrag -->
+				Eintrag
+			</li>
+			<li>
+				Eintrag
+			</li>
+		</ul>
+		
+		<ol>								<!-- Nummerierte Liste -->
+			<li>							<!-- Listen-Eintrag -->
+				Erster Eintrag
+			</li>
+			<li>
+				Zweiter Eintrag
+			</li>
+		</ol>
+	
+		<h1>
+			Überschrift Level 1 (größte)
+		</h1>
+		
+		<h6>
+			Überschrift Level 6 (kleinste)
+		</h6>
+		
+		<!-- Formattierungen -->
+		
+		<b>Fetter Text</b>					<!-- deprecated: nur noch semantische Bedeutung -->
+		
+		<i>Kursiver Text</i>				<!-- deprecated -->
+		
+		<font>Formattierter Text</font>		<!-- deprecated: jetzt CSS -->
+		
+		<em>Gewichtiges Wort</em>			<!-- soll b/i ablösen -->
+		
+		<strong>Gewichtiges Wort</strong>	<!-- soll b/i ablösen -->
+		
+		<!-- Eingebundene Objekte -->
+		
+		<a href="URL"></a> 					<!-- Hyperlink -->
+
+		<a href="mailto:bla@bla.de"></a> 	<!-- Hyperlink mit E-Mail -->
+		
+		<a name="myAnchor"></a> 			<!-- Anker im Dokument mit Namen "myAnchor" -->
+
+		<a href="#myAnchor"></a> 			<!-- Link auf den Anker "myAnchor" in diesem Dokument -->
+		
+		<img src="test.jpg">
+		
+		<tt>
+			Schreibmaschinen-Schrift
+		</tt>
+		
+		<cite>
+			Ein geiles Zitat ...
+		</cite>
+	
+		<table>								<!-- Tabelle -->
+			<tr>							<!-- Zeile -->
+				<td>						<!-- Spalte -->
+					Hier ist eine Zelle.
+				</td>
+			</tr>
+		</table>
+		
+		<form action="action.php" method="post">			<!-- Formular überträgt Daten per POST an "action.php"; alternativ: GET-->
+		
+			<select name="dropdown">							<!-- Drop-Down-Menü -->
+				<option value="1">
+					Option 1
+				</option>
+				<option value="2">
+					Option 2
+				</option>
+				<option value="3">
+					Option 3
+				</option>
+			</select>
+		
+			<select multiple name="multi_select" size="3">		<!-- Select-Menü mit möglicher Mehrfachauswahl -->
+				<option value="1">
+					Option 1
+				</option>
+				<option value="2" selected>						<!-- Vorauswahl -->
+					Option 2
+				</option>
+				<option value="3">
+					Option 3
+				</option>
+			</select>
+			
+			<textarea name="textbox" cols="40" rows="8">
+				Hier steht ganz viel lustiger Text drinnen, z.B. ein Kommentar.
+			</textarea>
+			
+			<input type="checkbox" name="check1"> 				<!-- Checkbox -->
+
+			<input type="radio" name="radio1"> 					<!-- Radio Button -->
+
+			<input type="text" name="edit1" size="20"> 			<!-- Textfeld der Größe 20 -->
+
+			<input type="submit" value="submit1">				<!-- Submit-Button löst Action aus / schickt Formular ab-->
+			
+			<input type="reset">								<!-- Reset Button -->
+			
+			<button>Normaler Button</button>					<!-- Normaler Button -->
+			
+		</form>
+	
+	</body>
+
+</html>

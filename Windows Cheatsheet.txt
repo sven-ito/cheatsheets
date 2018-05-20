@@ -1,0 +1,41 @@
+# Tasten-Kombos
+
+[Windows] + Pause					# Computer Eigenschaften
+[Windows] + R						# Ausführen
+[Windows] + P						# Monitor wechseln/Beamer etc. umschalten (ab Win7)
+[Windows] + [Pause] 			   	# "System"
+[Windows] + [Pfeil Oben]		   	# aktives Fenster maximieren
+[Windows] + [Pfeil Unten]		   	# aktives Fenster minimieren (Maximiert -> "Fenster" -> Minimiert)
+[Windows] + [Pfeil Links/Rechts]   	# aktives Fenster verschieben (durch verschd. Layouts: LinkerBildschirmRand -> Mitte (fenster) -> RechterBildschirmRand)
+[Windows] + [Shift] + [Pfeiltaste] 	# Verschiebe aktives Fenster auf nächsten Monitor in Pfeiltastenrichtung (mit around the Corner) (ab Win7)
+
+# Tools
+
+eventvwr.msc	# Ereignisanzaige (zum Debuggen von Programmen/Log-Files)
+msconfig.exe	# Start/Autostart/Dienste etc.
+psr.exe			# Problem-Aufzeichnung / Screen-Capturing (ab Win7)
+
+# CMD
+
+driverquery		# Listet alle vorhandenen Treiber
+
+mmc				# Managment Console
+reg				# CMD Registry Tool
+assoc .doc		# get file association
+driverquery		# Alle Treiber
+tasklist		# TaskMgr Infos auf Konsole
+
+# Multi-Tasking (entspricht Linux &)
+
+start "" "prog1.exe"
+start "" "prog2.exe"
+start "" "prog3.exe" /Parameter
+start "" "prog4.exe"
+	
+start "banane.exe" /B <--- Startet "banane.exe" in neuem CMD Window. /B schickt dieses command window in den background
+
+Windows 10:
+
+You can open those programs by hitting the Windows key and the number that corresponds to the location of the icon in the bar.
+
+Let's say, from left to right, you have the File Explorer folder icon, the multi-colored round Chrome browser icon, and the blue "e" for Microsoft's Edge browser. Hold down the Windows key and press "2," and Chrome will open right up for you. It's a quick way to access your most popular apps without reaching for your mouse.

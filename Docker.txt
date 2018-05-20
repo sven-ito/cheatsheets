@@ -1,0 +1,24 @@
+# Dockerfile
+
+# Docker CLI
+
+docker build -t friendlyhello .			# Build image from files in current dir; tag/name it "friendlyhello"
+docker run -p 4000:80 friendlyhello		# Run image as container with port forwarding 80 -> 4000 (host)
+
+												# This port remapping of 4000:80 is to demonstrate the difference between what you EXPOSE within the Dockerfile, and what you publish using docker run -p
+
+docker run -d -p 4000:80 friendlyhello 	# detached mode
+
+docker ps								# shows running containers with abbreviated container ID
+
+
+docker images							# show all locally available images
+docker pull [image name]				# download [image name] from current Docker registry
+
+# Workflow
+
+docker tag friendlyhello username/repository:tag
+docker push username/repository:tag
+docker run -p 4000:80 username/repository:tag
+
+# Note: If you don’t specify the :tag portion of these commands, the tag of :latest will be assumed, both when you build and when you run images.

@@ -1,0 +1,53 @@
+# Working Directory
+# Staging Area
+# -> Commit
+# Committed to Repo
+
+git add filename				# add to staging area
+git show HEAD					# aktuellster Commit
+git checkout HEAD filename		# zurück zu "filename" aus Repo
+
+git reset HEAD filename			# remove file from staging area?
+
+git reset 5d69206
+git branch						# which branch am I on?
+
+git branch myBranch				# Branch erstellen
+git checkout myBranch   		# zu myBranch wechseln
+
+git branch -d myBranch			# Branch löschen / abschneiden
+
+git remote -v					# list all remotes
+git fetch						# bring changes to remote branch?
+
+# access remote branch via origin/myBranch
+
+git push origin myBranch
+
+# content-addressable file system / content <=> same hash / different metadata
+
+# commit -> tree -> BLOB
+
+# ref = name of an object / hash
+# ref = tag = branch
+# same, different sematnics
+
+git reflog
+
+git reset feature
+git gc --prune=all				# garbage collection
+# 2 weeks
+
+# no fast forward <-> lazy / clean history
+# 
+# what is bitbucket?
+# 
+# merge strategies
+# 	resolve
+# 	recursive
+# 	octopus
+# 	ours
+# 	subtree
+# 	custom
+# 
+# merge system pluggable
